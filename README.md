@@ -4,22 +4,17 @@ This document describe some firt-time steps in your new Kubernetes Cluster
 
 ## Kubernetes Flavors
 
-
 ### Cloud
 
 #### [EKS : Amazon Elastic Kubernetes Service](https://docs.aws.amazon.com/pt_br/eks/latest/userguide/what-is-eks.html)
 
-
 #### [AKS : Azure Kubernetes Service](https://learn.microsoft.com/pt-br/azure/aks/what-is-aks)
 
-
 #### [GKE : Google Kubernetes Engine](https://cloud.google.com/kubernetes-engine)
-
 
 ### Local
 
 #### [Docker Desktop](https://www.docker.com/resources/kubernetes-and-docker/)
-
 
 #### [Podman Desktop](https://podman.io/features)
 
@@ -73,4 +68,3 @@ helm upgrade metrics-server metrics-server/metrics-server \
     --set args="{--kubelet-insecure-tls}" \
     -n kube-system
 ```
-

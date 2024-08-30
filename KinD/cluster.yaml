@@ -1,0 +1,29 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+name: kind
+
+networking:
+  ipFamily: dual
+  apiServerAddress: 127.0.0.1
+  apiServerPort: 6443
+
+nodes:
+  - role: control-plane
+    labels: 
+      node.kubernetes.io/role: control-plane
+      tier: all 
+
+  - role: worker
+    labels:
+      node.kubernetes.io/role: worker
+      tier: frontend
+
+  - role: worker
+    labels:
+      node.kubernetes.io/role: worker
+      tier: backend
+
+  - role: worker
+    labels:
+      node.kubernetes.io/role: worker
+      tier: backend
