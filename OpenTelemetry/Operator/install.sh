@@ -6,5 +6,5 @@ helm repo add open-telemetry \
 
 helm upgrade --install \
   -n otel --create-namespace \
-  --set "manager.collectorImage.repository=docker.io/otel/opentelemetry-collector-contrib" \
+  --set "manager.collectorImage.repository=otel/opentelemetry-collector-contrib" \
   otel-operator open-telemetry/opentelemetry-operator
