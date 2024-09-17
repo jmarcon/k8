@@ -8,8 +8,8 @@ $usr = "pguser"
 $pwd = "pg313233"
 $db  = "default"
 
-helm repo add $repo_name `
-  $repo_url `
+helm repo add `
+  $repo_name $repo_url `
   --force-update
 
 helm upgrade --install `

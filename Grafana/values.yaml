@@ -1,0 +1,25 @@
+replicas: 1
+
+image:
+  registry: docker.io
+  repository: grafana/grafana
+  tag: "10.4.0"
+
+persistence:
+  enabled: true
+  size: 20Gi
+
+  initChownData:
+    image:
+      tag: "1.36.1"
+
+resources:
+  limits:
+    cpu: 200m
+    memory: 256Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+
+adminUser: admin
+adminPassword: 313233aA

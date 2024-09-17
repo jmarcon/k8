@@ -6,11 +6,11 @@ $chart_ns = "otel"
 $chart_name = "opentelemetry-operator"
 $instance_name = "otel-operator"
 
-helm repo add $repo_name `
-  $repo_url `
+helm repo add `
+  $repo_name $repo_url `
   --force-update
 
 helm upgrade --install `
-  -n $chart_ns --create-namespace `
+  --namespace $chart_ns --create-namespace `
   $instance_name $repo_name/$chart_name `
   --set "manager.collectorImage.repository=otel/opentelemetry-collector-contrib"
