@@ -13,4 +13,4 @@ helm repo add $repo_name `
 helm upgrade --install `
   -n $chart_ns --create-namespace `
   --set "manager.collectorImage.repository=otel/opentelemetry-collector-contrib" `
-  $instance_name $chart_name/$repo_name
+  $instance_name $repo_name/$chart_name

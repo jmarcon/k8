@@ -34,3 +34,21 @@ The cluster will be created with 4 nodes (1 control-plane and 3 workers)
 ### [Minikube](https://minikube.sigs.k8s.io/docs/)
 
 Minikube is local Kubernetes, focusing on making it easy to learn and develop for Kubernetes.
+
+Minikube can also simulate the number of nodes and has a ton of addons that can improve your experience.
+
+```sh
+minikube start `
+    --profile minikube `
+    --nodes 3 `
+    --container-runtime containerd `
+    --cpus 12 `
+    --memory 64g `
+
+minikube addons enable metrics-server -p minikube
+minikube addons enable ingress        -p minikube
+minikube addons enable ingress-dns    -p minikube
+minikube addons enable dashboard      -p minikube
+```
+
+- metrics-server: can also be installed via helm chart (documentend in [this document](essential/METRICS.md))
