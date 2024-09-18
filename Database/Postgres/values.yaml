@@ -1,0 +1,4 @@
+auth:
+  username: "pguser"
+  password: "pg313233"
+  database: "default"

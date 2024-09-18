@@ -5,6 +5,7 @@ $repo_url = "https://kedacore.github.io/charts"
 $chart_ns = "keda"
 $chart_name = "keda"
 $instance_name = "keda"
+$script_root = $PSScriptRoot
 
 helm repo add `
   $repo_name $repo_url `
@@ -12,4 +13,5 @@ helm repo add `
 
 helm upgrade --install `
   --namespace $chart_ns --create-namespace `
-  $instance_name $repo_name/$chart_name
+  $instance_name $repo_name/$chart_name `
+  --values $script_root/values.yaml
