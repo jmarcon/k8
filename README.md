@@ -15,3 +15,7 @@ Some additional documentation:
 
 - [OpenTelemetry](_docs/must_have/OTEL.md) - Collect data (traces, metrics, logs) from the environment
 - [Grafana](_docs/must_have/GRAFANA.md) - Dashboards for monitoring and observability
+
+## Interesting
+
+- [Keda](_docs/interesting/KEDA.md) - Kubernetes-based Event Driven Autoscaling
