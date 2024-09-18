@@ -6,6 +6,8 @@ readonly chart_ns='monitoring'
 readonly chart_name='grafana'
 readonly instance_name='grafana'
 
+readonly script_root=$(dirname "$(readlink -f "${BASH_SOURE}")")
+
 helm repo add \
   $repo_name $repo_url \
   --force-update
@@ -13,4 +15,4 @@ helm repo add \
 helm upgrade --install \
   --namespace $chart_ns --create-namespace \
   $instance_name $repo_name/$chart_name \
-  --values values.yaml
+  --values $script_root/values.yaml

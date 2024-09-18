@@ -12,4 +12,4 @@ helm upgrade --install \
   grafana grafana/grafana
 ```
 
-Or you can use this repository with PowerShell `./Metrics/install.ps1` or Bash `./Metrics/install.sh`
+Or you can use this repository with PowerShell `./Grafana/install.ps1` or Bash `./Grafana/install.sh`

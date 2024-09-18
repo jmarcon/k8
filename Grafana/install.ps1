@@ -5,6 +5,7 @@ $repo_url = "https://grafana.github.io/helm-charts"
 $chart_ns = "monitoring"
 $chart_name = "grafana"
 $instance_name = "grafana"
+$script_root = $PSScriptRoot
 
 helm repo add `
   $repo_name $repo_url `
@@ -13,4 +14,4 @@ helm repo add `
 helm upgrade --install `
   --namespace $chart_ns --create-namespace `
   $instance_name $repo_name/$chart_name `
-  --values values.yaml
+  --values $script_root/values.yaml
