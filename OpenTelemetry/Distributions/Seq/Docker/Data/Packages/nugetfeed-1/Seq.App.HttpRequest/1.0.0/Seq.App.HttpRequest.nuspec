@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Seq.App.HttpRequest</id>
+    <version>1.0.0</version>
+    <authors>Datalust, Serilog Contributors</authors>
+    <license type="expression">Apache-2.0</license>
+    <licenseUrl>https://licenses.nuget.org/Apache-2.0</licenseUrl>
+    <icon>seq-app-httprequest.png</icon>
+    <projectUrl>https://github.com/datalust/seq-app-httprequest</projectUrl>
+    <description>Send events and notifications from Seq to a remote HTTP/REST/WebHook endpoint.</description>
+    <tags>seq-app</tags>
+    <repository type="git" url="https://github.com/datalust/seq-app-httprequest" commit="557628cecf321e8aa8e578f49c4e8eb7670cb390" />
+    <dependencies>
+      <group targetFramework="net6.0">
+        <dependency id="Seq.Apps" version="2023.4.0" exclude="Build,Analyzers" />
+        <dependency id="Seq.Syntax" version="1.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

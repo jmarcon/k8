@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2010/07/nuspec.xsd">
+  <metadata>
+    <id>GeckoBoardSeq</id>
+    <version>65.0.0</version>
+    <authors>Blue Motor Finance</authors>
+    <owners>Blue Motor Finance</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <licenseUrl>http://bluemotorfinance.co.uk/</licenseUrl>
+    <projectUrl>http://bluemotorfinance.co.uk/</projectUrl>
+    <iconUrl>http://bluemotorfinance.co.uk/styles/img/logo-bmf.png</iconUrl>
+    <description>A SnakeDashboard integration app for Seq (https://getseq.net).</description>
+    <language>en-US</language>
+    <tags>seq-app seq serilog events</tags>
+  </metadata>
+</package>

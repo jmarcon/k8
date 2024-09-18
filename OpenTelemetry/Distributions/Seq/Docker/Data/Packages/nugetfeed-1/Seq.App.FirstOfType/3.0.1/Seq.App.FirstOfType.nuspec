@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Seq.App.FirstOfType</id>
+    <version>3.0.1</version>
+    <authors>Datalust and Contributors</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>icon.png</icon>
+    <projectUrl>https://github.com/datalust/seq-app-firstoftype</projectUrl>
+    <description>An app for Seq that raises an event whenever it detects that a raised event type has not been seen previously. Requires Seq 5.1+, for earlier Seq versions
+      use the 2.x series of releases of this package.</description>
+    <tags>seq-app</tags>
+    <repository type="git" url="https://github.com/datalust/seq-app-firstoftype" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Seq.Apps" version="5.1.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog" version="2.9.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

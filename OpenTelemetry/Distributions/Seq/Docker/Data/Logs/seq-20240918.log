@@ -1,0 +1,36 @@
+{"@t":"2024-09-18T20:19:24.5772051Z","@mt":"Seq {SeqVersion} running on OS {OSCaption}","SeqVersion":"2024.3.12250","OSCaption":"Ubuntu 22.04.4 LTS","SourceContext":"Seq.Server.Features.Diagnostics.EnvironmentInformationWriter"}
+{"@t":"2024-09-18T20:19:24.8897877Z","@mt":"Opening event store at {StreamPath}","StreamPath":"/data/Stream/stream.flare","SourceContext":"Seq.Engine.Cluster.StorageNodeCoordinator"}
+{"@t":"2024-09-18T20:19:24.9511567Z","@mt":"Ingestion enabled","SourceContext":"Seq.Engine.Cluster.StorageNodeCoordinator"}
+{"@t":"2024-09-18T20:19:24.9583876Z","@mt":"Opening metastore {MetastorePath}","MetastorePath":"/data/Documents/metastore.flare","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2024-09-18T20:19:25.0139796Z","@mt":"Initializing a new metastore","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2024-09-18T20:19:25.1383793Z","@mt":"Creating default workspace for {UserId}","UserId":"user-admin"}
+{"@t":"2024-09-18T20:19:25.2681800Z","@mt":"Storage subsystem available"}
+{"@t":"2024-09-18T20:19:25.3051565Z","@mt":"Seq listening on {ListenUris}","ListenUris":["http://localhost/","https://localhost/","http://localhost:5341/","https://localhost:45341/"]}
+{"@t":"2024-09-18T20:22:43.6948240Z","@mt":"Termination signal received"}
+{"@t":"2024-09-18T20:22:43.7058089Z","@mt":"Signalling for {Workers} worker task(s) to complete","Workers":1,"SourceContext":"Seq.Engine.Workers.WorkerPool"}
+{"@t":"2024-09-18T20:22:44.3627409Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Monitor alerts and trigger notifications","WorkId":"23fb853e-defe-406c-a294-5c20a2cb2e9e","SourceContext":"Seq.Engine.Workers.WorkerPool"}
+{"@t":"2024-09-18T20:22:44.4076656Z","@mt":"Stopping {Tasks} scheduled tasks","Tasks":13,"SourceContext":"Seq.Server.Tasks.TaskRunner"}
+{"@t":"2024-09-18T20:22:44.4088950Z","@mt":"Stopping input channel","SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2024-09-18T20:22:45.3278889Z","@mt":"Shutting down input channel; {AcceptedCount} queued events will be written","AcceptedCount":0,"SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2024-09-18T20:22:45.3284713Z","@mt":"Stopping broadcast channel","SourceContext":"Seq.Engine.Broadcast.BroadcastChannel"}
+{"@t":"2024-09-18T20:22:46.3277839Z","@mt":"Shutting down broadcast channel with {AllowableFlush} flushable event batches (+{Tolerance} tolerance)","AllowableFlush":0,"Tolerance":15,"SourceContext":"Seq.Engine.Broadcast.BroadcastChannel"}
+{"@t":"2024-09-18T20:22:46.3290441Z","@mt":"Closing event store","SourceContext":"Seq.Engine.Cluster.StorageNodeCoordinator"}
+{"@t":"2024-09-18T20:22:46.3300004Z","@mt":"Closing metastore","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2024-09-18T20:22:46.3401860Z","@mt":"Server stopped cleanly"}
+{"@t":"2024-09-18T20:23:48.0912361Z","@mt":"Seq {SeqVersion} running on OS {OSCaption}","SeqVersion":"2024.3.12250","OSCaption":"Ubuntu 22.04.4 LTS","SourceContext":"Seq.Server.Features.Diagnostics.EnvironmentInformationWriter"}
+{"@t":"2024-09-18T20:23:48.3577621Z","@mt":"Opening event store at {StreamPath}","StreamPath":"/data/Stream/stream.flare","SourceContext":"Seq.Engine.Cluster.StorageNodeCoordinator"}
+{"@t":"2024-09-18T20:23:48.4013454Z","@mt":"Ingestion enabled","SourceContext":"Seq.Engine.Cluster.StorageNodeCoordinator"}
+{"@t":"2024-09-18T20:23:48.4073546Z","@mt":"Opening metastore {MetastorePath}","MetastorePath":"/data/Documents/metastore.flare","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2024-09-18T20:23:48.4669845Z","@mt":"Storage subsystem available"}
+{"@t":"2024-09-18T20:23:48.4968386Z","@mt":"Seq listening on {ListenUris}","ListenUris":["http://localhost/","https://localhost/","http://localhost:5341/","https://localhost:45341/"]}
+{"@t":"2024-09-18T20:26:59.8084866Z","@mt":"Termination signal received"}
+{"@t":"2024-09-18T20:26:59.8143331Z","@mt":"Signalling for {Workers} worker task(s) to complete","Workers":1,"SourceContext":"Seq.Engine.Workers.WorkerPool"}
+{"@t":"2024-09-18T20:27:00.5500056Z","@mt":"Work {WorkDescription} ({WorkId}) observed cancellation and completed","WorkDescription":"Monitor alerts and trigger notifications","WorkId":"eb548b69-dfe3-4535-abaa-e7dd550f2332","SourceContext":"Seq.Engine.Workers.WorkerPool"}
+{"@t":"2024-09-18T20:27:00.6163889Z","@mt":"Stopping {Tasks} scheduled tasks","Tasks":13,"SourceContext":"Seq.Server.Tasks.TaskRunner"}
+{"@t":"2024-09-18T20:27:00.6176218Z","@mt":"Stopping input channel","SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2024-09-18T20:27:01.5182086Z","@mt":"Shutting down input channel; {AcceptedCount} queued events will be written","AcceptedCount":0,"SourceContext":"Seq.Server.Features.Apps.Inputs.InputChannel"}
+{"@t":"2024-09-18T20:27:01.5189149Z","@mt":"Stopping broadcast channel","SourceContext":"Seq.Engine.Broadcast.BroadcastChannel"}
+{"@t":"2024-09-18T20:27:02.5171485Z","@mt":"Shutting down broadcast channel with {AllowableFlush} flushable event batches (+{Tolerance} tolerance)","AllowableFlush":0,"Tolerance":15,"SourceContext":"Seq.Engine.Broadcast.BroadcastChannel"}
+{"@t":"2024-09-18T20:27:02.5183122Z","@mt":"Closing event store","SourceContext":"Seq.Engine.Cluster.StorageNodeCoordinator"}
+{"@t":"2024-09-18T20:27:02.5252062Z","@mt":"Closing metastore","SourceContext":"Quince.Storage.Native.NativeDocumentStore"}
+{"@t":"2024-09-18T20:27:02.5301391Z","@mt":"Server stopped cleanly"}

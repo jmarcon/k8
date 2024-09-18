@@ -8,12 +8,15 @@ dependencies = [
     "fastapi[standard]>=0.115.0",
     "opentelemetry-api>=1.27.0",
     "opentelemetry-exporter-otlp>=1.27.0",
+    "opentelemetry-exporter-richconsole>=0.48b0",
     "opentelemetry-instrumentation-fastapi>=0.48b0",
     "opentelemetry-sdk>=1.27.0",
+    "python-dotenv>=1.0.1",
     "requests>=2.32.3",
 ]
 
 [tool.uv]
-dev-dependencies = [
-    "ruff>=0.6.5",
-]
+dev-dependencies = ["ruff>=0.6.5"]
+
+[tool.ruff]
+line-length = 120

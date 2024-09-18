@@ -277,8 +277,10 @@ dependencies = [
     { name = "fastapi", extra = ["standard"] },
     { name = "opentelemetry-api" },
     { name = "opentelemetry-exporter-otlp" },
+    { name = "opentelemetry-exporter-richconsole" },
     { name = "opentelemetry-instrumentation-fastapi" },
     { name = "opentelemetry-sdk" },
+    { name = "python-dotenv" },
     { name = "requests" },
 ]
 
@@ -292,8 +294,10 @@ requires-dist = [
     { name = "fastapi", extras = ["standard"], specifier = ">=0.115.0" },
     { name = "opentelemetry-api", specifier = ">=1.27.0" },
     { name = "opentelemetry-exporter-otlp", specifier = ">=1.27.0" },
+    { name = "opentelemetry-exporter-richconsole", specifier = ">=0.48b0" },
     { name = "opentelemetry-instrumentation-fastapi", specifier = ">=0.48b0" },
     { name = "opentelemetry-sdk", specifier = ">=1.27.0" },
+    { name = "python-dotenv", specifier = ">=1.0.1" },
     { name = "requests", specifier = ">=2.32.3" },
 ]
 
@@ -423,6 +427,21 @@ dependencies = [
 sdist = { url = "https://files.pythonhosted.org/packages/31/0a/f05c55e8913bf58a033583f2580a0ec31a5f4cf2beacc9e286dcb74d6979/opentelemetry_exporter_otlp_proto_http-1.27.0.tar.gz", hash = "sha256:2103479092d8eb18f61f3fbff084f67cc7f2d4a7d37e75304b8b56c1d09ebef5", size = 15059 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/2d/8d/4755884afc0b1db6000527cac0ca17273063b6142c773ce4ecd307a82e72/opentelemetry_exporter_otlp_proto_http-1.27.0-py3-none-any.whl", hash = "sha256:688027575c9da42e179a69fe17e2d1eba9b14d81de8d13553a21d3114f3b4d75", size = 17203 },
+]
+
+[[package]]
+name = "opentelemetry-exporter-richconsole"
+version = "0.48b0"
+source = { registry = "https://pypi.org/simple" }
+dependencies = [
+    { name = "opentelemetry-api" },
+    { name = "opentelemetry-sdk" },
+    { name = "opentelemetry-semantic-conventions" },
+    { name = "rich" },
+]
+sdist = { url = "https://files.pythonhosted.org/packages/e0/9b/0d29f92e01b0b1bcb0d57bf7e9523a6c88a4da851330a7d6e81c571dd487/opentelemetry_exporter_richconsole-0.48b0.tar.gz", hash = "sha256:5f192f3f1015a0f891062842cd42e050525aff041d24d48ea46a67fe51764358", size = 4147 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/72/ac/27bc176af943ab6a19e14bfa66fbc60af58639acca6a3b4cc1a68e285ade/opentelemetry_exporter_richconsole-0.48b0-py3-none-any.whl", hash = "sha256:3b0c97b8c31bf5ff255bff3602142ce80324d519782a7e129dada344e6830f87", size = 4382 },
 ]
 
 [[package]]

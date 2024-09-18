@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2013/05/nuspec.xsd">
+  <metadata>
+    <id>Seq.App.FileArchive</id>
+    <version>3.0.1-dev-00003</version>
+    <authors>Datalust and Contributors</authors>
+    <license type="file">LICENSE</license>
+    <licenseUrl>https://aka.ms/deprecateLicenseUrl</licenseUrl>
+    <icon>icon.png</icon>
+    <projectUrl>https://github.com/datalust/seq-app-filearchive</projectUrl>
+    <description>The file archive app for Seq writes incoming events to a rolling file set for long-term archival storage. Requires Seq 5.1+, for earlier Seq versions
+      use the 2.x series of releases of this package.</description>
+    <tags>seq-app</tags>
+    <repository type="git" url="https://github.com/datalust/seq-app-filearchive" />
+    <dependencies>
+      <group targetFramework=".NETStandard2.0">
+        <dependency id="Seq.Apps" version="5.1.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog" version="2.9.0" exclude="Build,Analyzers" />
+        <dependency id="Serilog.Sinks.RollingFile" version="2.1.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+</package>

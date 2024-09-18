@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<coreProperties xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://schemas.openxmlformats.org/package/2006/metadata/core-properties">
+  <dc:creator>Datalust and Contributors</dc:creator>
+  <dc:description>The file archive app for Seq writes incoming events to a rolling file set for long-term archival storage. Requires Seq 5.1+, for earlier Seq versions
+      use the 2.x series of releases of this package.</dc:description>
+  <dc:identifier>Seq.App.FileArchive</dc:identifier>
+  <version>3.0.1-dev-00003</version>
+  <keywords>seq-app</keywords>
+  <lastModifiedBy>NuGet.Build.Tasks.Pack, Version=5.11.1.5, Culture=neutral, PublicKeyToken=31bf3856ad364e35;</lastModifiedBy>
+</coreProperties>
