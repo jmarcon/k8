@@ -26,3 +26,8 @@ dependencies = [
     "opentelemetry-util-http>=0.48b0",
     "pip>=24.2",
 ]
+
+[tool.uv]
+dev-dependencies = [
+    "ruff>=0.6.5",
+]
