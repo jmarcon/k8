@@ -92,7 +92,7 @@ flowchart TD
 
 ---
 
-```puml
+```mermaid
 flowchart TD
     subgraph "Node 1"
         subgraph pod1["pod"]
