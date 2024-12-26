@@ -55,126 +55,70 @@ flowchart TD
     logs -.- note
 ```
 
-```puml
-footer "DameonSet or Sidecar"
-title Logging
 
-rectangle cluster {
-  rectangle "Node 1" as node1 {
-    rectangle "pod" as pod1 {
-      component "Application" <<container>> as app1
-    }
-    rectangle "pod" as pod3 {
-      component "Application" <<container>> as app3
-    }
-    file "Logs" <<FileSystem>> as logs1
-    component "Collector" <<Daemonset>> as col1
-    app1 --> logs1
-    app3 --> logs1
-    col1 .> logs1 : scraps
-  }
-  rectangle "Node 2" as node2{
-    rectangle "pod" as pod2 {
-      component "Application" <<container>> as app2
-    }
-    rectangle "pod" as pod4 {
-      component "Application" <<container>> as app4
-      component "Collector" <<sidecar>> as col4
-      app4 --> col4 : send logs
-    }
-    file "Logs" <<FileSystem>> as logs2
-    component "Collector" <<Daemonset>> as col2
-    app2 -> logs2
-    logs2 <.. col2 : scraps
-  }
-}
-database "Logs" as logs
+---
 
-col1 --> logs : store
-col2 --> logs : store
-col4 --> logs : store
+```mermaid
+flowchart TD
+    subgraph Node1["Node 1"]
+        subgraph pod1["pod"]
+            app1["Application (Container)"]
+            col1["Collector (Sidecar)"]
+            col1 -.->|scraps| app1
+        end
+    end
 
-note right of logs
-  Logs Aggregation can be
-  inside the cluster or
-  in some external system
-end note
+    subgraph Node2["Node 2"]
+        subgraph pod2["pod"]
+            app2["Application (Container)"]
+            col2["Collector (Sidecar)"]
+            col2 -.->|scraps| app2
+        end
+        metrics_api["Cluster<br>Metrics (Interface)"]
+        col3["Collector (Deployment)"]
+        col3 -.->|scraps| metrics_api
+    end
+
+    metrics["Metrics (Database)"]@{ shape: db }
+
+    col1 -->|remote-write| metrics
+    col2 -->|remote-write| metrics
+    col3 --->|remote-write| metrics
+
+    %% Nota explicativa
+    note["Metrics Aggregation can be inside the cluster or in some external system"]@{ shape: brace }
+    metrics -.- note
 ```
 
 ---
 
 ```puml
-title Metrics
-footer "Deployment or Sidecar"
+flowchart TD
+    subgraph "Node 1"
+        subgraph pod1["pod"]
+            app1["Application (Container)"]
+            col1["Collector (Sidecar)"]
+            app1 -->|send<br>data| col1
+        end
+    end
 
-rectangle cluster {
-  rectangle "Node 1" as node1 {
-    rectangle "pod" as "pod1" {
-      component "Application" <<container>> as app1
-      component "Collector" <<sidecar>> as col1
-      app1 <.. col1 : scraps\n /metrics
-    }
-  }
-  rectangle "Node 2" as node2{
-    rectangle "pod" as "pod2" {
-      component "Application" <<container>> as app2
-      component "Collector" <<sidecar>> as col2
-      app2 <.. col2 : scraps\n /metrics
-    }
-    interface "Cluster\nMetrics" as metrics_api
-    component "Collector" <<Deployment>> as col3
-    metrics_api <.. col3 : scraps\n /metrics
-  }
-}
+    subgraph "Node 2"
+        col2["Collector (Deployment)"]
+        subgraph pod2["pod"]
+            app2["Application (Container)"]
+        end
+        app2 -->|send<br>data| col2
+    end
 
-database "Metrics" as metrics
+    tracing["Tracing (Database)"]@{ shape: db }
 
-col1 --> metrics : push\n remote-write
-col2 --> metrics : push\n remote-write
-col3 --> metrics : push\n remote-write
 
-note right of metrics
-  Metrics Aggregation can be
-  inside the cluster or
-  in some external system
-end note
-```
+    col1 --> tracing
+    col2 --> tracing
 
----
-
-```puml
-title 
-  Tracing
-  Sidecar or Deployment
-end title
-
-rectangle cluster {
-  rectangle "Node 1" as node1 {
-    rectangle "pod" as "pod1" {
-      component "Application" <<container>> as app1
-      component "Collector" <<sidecar>> as col1
-      app1 --> col1 : send\ndata
-    }
-  }
-  rectangle "Node 2" as node2{
-    component "Collector" <<deployment>> as col2
-    rectangle "pod" as "pod2" {
-      component "Application" <<container>> as app2
-      app2 --> col2 : send\ndata
-    }
-  }
-}
-
-database "Tracing" as tracing
-
-col1 --> tracing
-col2 --> tracing
-
-note right of tracing
-  Tracing Aggregation can
-  be inside the cluster or
-  in some external system
-end note
+    %% Nota explicativa
+    note["Tracing Aggregation can<br>be inside the cluster or<br>in some external system"]@{ shape: brace }
+    tracing -.- note
 ```
 
 ---
