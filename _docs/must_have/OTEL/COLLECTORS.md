@@ -11,6 +11,50 @@ You can use 4 different types of deployment modes:
 
 Let's show some simple diagrams of possible implementations of the collectors for each type of telemetry data:
 
+```mermaid
+flowchart TD
+    subgraph Node1["Node 1"]
+        subgraph pod1["pod"]
+            app1["Application"]@{shape: event }
+        end
+        subgraph pod3["pod"]
+            app3["Application"]@{shape: event }
+        end
+        logs1["Logs (FileSystem)"]@{ shape: doc }
+        col1["Collector (Daemonset)"]@{shape: event }
+        app1 --> logs1
+        app3 --> logs1
+        col1 -.->|scraps| logs1
+    end
+
+    subgraph Node2["Node 2"]
+        subgraph pod2["pod"]
+            app2["Application"]@{shape: event }
+        end
+        subgraph pod4["pod"]
+            app4["Application"]@{shape: event }
+            col4["Collector (Sidecar)"]@{shape: event }
+        end
+        logs2["Logs (FileSystem)"]@{ shape: doc }
+        col1["Collector (Daemonset)"]@{shape: event }
+        col2["Collector (Daemonset)"]@{shape: event }
+        app4 -->|send logs| col4
+        app2 --> logs2
+        logs2 -.->|scraps| col2
+    end
+
+    logs["Logs (Database)"]@{ shape: db }
+
+    col1 -->|store| logs
+    col2 -->|store| logs
+    col4 -->|store| logs
+
+    %% Nota explicativa
+    note["Logs Aggregation can be inside the cluster or in some external system"]@{ shape: brace }
+    logs:::note
+    logs -.- note
+```
+
 ```puml
 footer "DameonSet or Sidecar"
 title Logging
